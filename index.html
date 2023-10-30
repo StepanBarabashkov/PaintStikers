@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>MouseHouse</title>
+</head>
+<body>
+    <div class="progressbar">
+        <div class="progressbar-line"></div>
+    </div>
+    <div class="hat">
+        <h1 align="center">MOUSE HOUSE</h1>
+    </div>
+    <div class="about">
+        <h2 align="center">ABOUT PROJECT</h2>
+        <p align="center">Stickers in messengers have become an integral part of communication. 
+            There are many sticker packs on a variety of topics. 
+            But I think many people have encountered the problem that their favorite sticker pack doesn’t have the sticker they need :c 
+            Project team was able to find a solution to this problem. On this site you can offer the sticker you want to add to your sticker pack.</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="indicator" class="isWrite"></div>
+    <canvas id="canvas"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" 
+integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+<script>
+SmoothScroll({
+    // Время скролла 400 = 0.4 секунды
+    animationTime    : 800,
+    // Размер шага в пикселях 
+    stepSize         : 75,
+
+    // Дополнительные настройки:
+    
+    // Ускорение 
+    accelerationDelta : 30,  
+    // Максимальное ускорение
+    accelerationMax   : 2,   
+
+    // Поддержка клавиатуры
+    keyboardSupport   : true,  
+    // Шаг скролла стрелками на клавиатуре в пикселях
+    arrowScroll       : 50,
+
+    // Pulse (less tweakable)
+    // ratio of "tail" to "acceleration"
+    pulseAlgorithm   : true,
+    pulseScale       : 4,
+    pulseNormalize   : 1,
+
+    // Поддержка тачпада
+    touchpadSupport   : true,
+})
+</script>
+
+<script> //top progress bar
+    let fullHeight = document.body.scrollHeight;  
+    let innerHeight= window.innerHeight;
+    const progressbar = document.querySelector('.progressbar>.progressbar-line')
+
+
+    window.addEventListener('scroll', () => {
+        progressbar.style.width = ((scrollY * 100) / (fullHeight - innerHeight)) + '%';
+    });
+</script>
+</body>
+</html>
+
+<style>
+    .hat {height: 200px}
+    .progressbar {width: 100%; height: 5px; background-color: black; position: fixed; top: 0;}
+    .progressbar-line {width: 0; height: 5px; background-color: white; }
+    .hat h1 {font-family: Arial Black; color: white;}
+    .about {width: 70%; margin: 0 auto;}
+    h2 {color: white; font-family: Arial Black;}
+    p {color: white; font-family: Monospace; font-size: large;}
+    ::-webkit-scrollbar { width: 0;}
+    body {background-color: black; margin: 0;}
+</style>
